@@ -15,4 +15,17 @@ const revealSection = () => {
 
 window.addEventListener("scroll", revealSection);
 window.addEventListener("load", revealSection);
+// Typing animation
+const text = "Web Developer | College Student";
+let index = 0;
+
+function typeEffect() {
+  if (index < text.length) {
+    document.getElementById("typing").textContent += text.charAt(index);
+    index++;
+    setTimeout(typeEffect, 80);
+  }
+}
+
+window.addEventListener("load", typeEffect);
 
